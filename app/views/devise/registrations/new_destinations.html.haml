@@ -52,8 +52,7 @@
           %span.input__group__content__required
             必須
           %br
-          = f.text_field :prefecture, {autofocus: true, placeholder: "例）大阪府", class: 'input__group__content__box'}
-
+          = f.collection_select :prefecture_id, Prefecture.all, :id, :name
         .input__group__content
           %label.input__group__content__label
             市区町村
