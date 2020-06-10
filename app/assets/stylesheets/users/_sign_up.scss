@@ -15,7 +15,7 @@
   background: #fff;
   line-height: 1.5;
   font-size: 16px;
-  margin-top: 8px;
+  
 }
 
 @mixin registerbox_name {
@@ -63,6 +63,17 @@
   border: 1px solid transparent;
 }
 
+@mixin selecter {
+  
+  height: 40px;
+  padding: 10px 10px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-top: 8px;
+}
 
 
 .signUp {
@@ -155,17 +166,20 @@
         &__box {
           @include registerbox
         }
-        select {
-          width: 343px;
-          height: 43px;
-          padding: 10px 10px 8px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          background: #fff;
-          line-height: 1.5;
-          font-size: 16px;
-          margin-top: 8px;
-          color: gray;
+        &__prefecture {
+          @include selecter
+        }
+        &__birth {
+          .year {
+            @include selecter
+            
+          }
+          .month {
+            @include selecter
+          }
+          .day {
+            @include selecter
+          }
         }
 
         &__any {

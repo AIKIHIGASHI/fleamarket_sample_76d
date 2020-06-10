@@ -22,9 +22,9 @@
       - if user_signed_in?
         %ul.lists__right
           %li.lists__right__item.lists__right__item--login
-            = link_to "マイページ", user_path(current_user), class: 'items'
+            -# = link_to "マイページ", user_path(current_user), class: 'items'
           %li.lists__right__item.lists__right__item--new
-            = link_to "ログアウト", destroy_user_session_path, class: 'items'
+            = link_to "ログアウト", destroy_user_session_path(current_user), method: :delete, class: 'items'
             
       - else
         %ul.lists__right
